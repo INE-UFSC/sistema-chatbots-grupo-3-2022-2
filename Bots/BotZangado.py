@@ -3,7 +3,8 @@ from Bots.Bot import Bot
 class BotZangado(Bot):
     def __init__(self,nome):
         super.__init__(nome , {"Qual é o seu nome?" : f"Meu nome é {self.__nome} e pare de falar comigo", 
-        "Quero um conselho": "Meu conselho é que você vá embora. Eu não quero conversar com você!"})
+        "Quero um conselho": "Meu conselho é que você vá embora. Eu não quero conversar com você!",
+        "Quero uma piada": "Não sou palhaço para contar uma piada para você. Vá embora!"})
 
 
     def apresentacao(self):
