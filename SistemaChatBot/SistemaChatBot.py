@@ -1,11 +1,14 @@
 from Bots.Bot import Bot
 
 class SistemaChatBot:
-    def __init__(self,nomeEmpresa,lista_bots):
-        self.__empresa=nomeEmpresa
-        ##verificar se a lista de bots contém apenas bots
-        self.__lista_bots=lista_bots
+    def __init__(self, nome_empresa: str, lista_bots: list):
+        self.__empresa= nome_empresa
         self.__bot = None
+
+        for bot in lista_bots:
+            if not isinstance(bot, Bot):
+                raise TypeError("Lista de bots deve conter apenas objetos do tipo Bot")
+        self.__lista_bots= lista_bots
     
     def boas_vindas(self):
         pass
