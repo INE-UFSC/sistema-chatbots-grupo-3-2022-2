@@ -36,7 +36,7 @@ class SistemaChatBot:
                     self.__bot = self.__lista_bots[escolha-1]
                     break
         
-        self.__comandos_bot = self.__bot.comandos.keys()
+        self.__comandos_bot = list(self.__bot.comandos.keys())
 
     def mostra_comandos_bot(self): # Mostra os comandos disponíveis do bot escolhido
         self.__bot.mostra_comandos()
@@ -57,7 +57,7 @@ class SistemaChatBot:
                 else:
                     break
         
-        self.__bot.executa_comando(self.__comandos_bot[escolha-1]) # Envia o comando escolhido (string da chave) para o bot escolhido
+        print(self.__bot.executa_comando(self.__comandos_bot[escolha-1])) # Envia o comando escolhido (string da chave) para o bot escolhido
         return True
 
     def inicio(self):
