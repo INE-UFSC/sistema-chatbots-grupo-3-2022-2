@@ -5,6 +5,7 @@ class SistemaChatBot:
     def __init__(self, nome_empresa: str, lista_bots: list):
         self.__empresa= nome_empresa
         self.__bot = None
+        self.__comandos_bot = None
 
         for bot in lista_bots:
             if not isinstance(bot, Bot):
@@ -12,45 +13,61 @@ class SistemaChatBot:
         self.__lista_bots= lista_bots
     
     def boas_vindas(self):
-        print("Bem vindo ao sistema de bots da empresa {}!".format(self.__empresa))
+        print("Bem vindo ao sistema de bots da empresa {}!\n".format(self.__empresa))
 
-    def mostra_menu(self):
-        pass
-        ##mostra o menu de escolha de bots
-    
-    def escolhe_bot(self):
+    def mostra_menu(self): # Mosta o menu de escolhas de bot
         print("Escolha um bot para conversar:\n")
         for index, bot in enumerate(self.__lista_bots):
             print(f"{index+1}. {bot.nome}")
-        
+    
+    def escolhe_bot(self): # Escolhe o bot que o usuário quer conversar
         # Restrições de entrada da escolha
         while True:
             try:
                 escolha = int(input("Digite o número do bot: "))
-            except:
-                print("Digite um número válido")
+            except: # Se houver algum erro na entrada, mostra mensagem de erro e pede novamente
+                print("> Digite um número válido")
                 continue
-            else:
+            else: # Se não houver erro, verifica se o número está dentro do intervalo
                 if escolha < 1 or escolha > len(self.__lista_bots):
-                    print("Digite um número válido")
-                    continue
+                    print("> Digite um número válido")
+                    continue # Se não estiver, mostra mensagem de erro e pede novamente
                 else:
                     self.__bot = self.__lista_bots[escolha-1]
                     break
+        
+        self.__comandos_bot = self.__bot.comandos.keys()
 
-    def mostra_comandos_bot(self):
-        pass
-        ##mostra os comandos disponíveis no bot escolhido
+    def mostra_comandos_bot(self): # Mostra os comandos disponíveis do bot escolhido
+        for index, comando in enumerate(self.__comandos_bot):
+            print(f"{index+1}. {comando}")
+        print("\n")
 
     def le_envia_comando(self):
-        pass
-        ##faz a entrada de dados do usuário e executa o comando no bot ativo
+        while True:
+            try:
+                escolha = int(input("Digite o número do comando escolhido: "))
+            except: # Se houver algum erro na entrada, mostra mensagem de erro e pede novamente
+                print("> Digite um número válido")
+                continue
+            else: # Se não houver erro, verifica se o número está dentro do intervalo
+                if escolha < 1 or escolha > len(self.__comandos_bot):
+                    print("> Digite um número válido")
+                    continue # Se não estiver, mostra mensagem de erro e pede novamente
+                else:
+                    break
+        
+        self.__bot.executa_comando(self.__comandos_bot[escolha-1]) # Envia o comando escolhido (string da chave) para o bot escolhido
+        
 
     def inicio(self):
-        pass
-        ##mostra mensagem de boas-vindas do sistema
-        ##mostra o menu ao usuário
-        ##escolha do bot      
-        ##mostra mensagens de boas-vindas do bot escolhido
-        ##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
-        ##ao sair mostrar a mensagem de despedida do bot
+        self.boas_vindas() # Mostra mensagem de boas-vindas do sistema
+        self.mostra_menu() # Mostra o menu ao usuário
+        self.escolhe_bot() # Escolha do bot      
+        self.__bot.boas_vindas() # Mostra mensagens de boas-vindas do bot escolhido
+        
+        # Entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
+        while True:
+            ...
+        
+        self.__bot.despedida() # Ao sair mostrar a mensagem de despedida do bot
