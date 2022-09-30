@@ -72,4 +72,4 @@ class SistemaChatBot:
             self.mostra_comandos_bot()
             status = self.le_envia_comando()
         
-        self.__bot.despedida() # Ao sair mostrar a mensagem de despedida do bot
+        print(self.__bot.despedida()) # Ao sair mostrar a mensagem de despedida do bot
