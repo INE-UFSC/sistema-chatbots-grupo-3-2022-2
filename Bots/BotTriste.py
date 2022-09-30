@@ -8,15 +8,13 @@ class BotTriste(Bot):
         "Quero uma piada:": "Eu não sei contar piadas. Eu sou triste."}
 
         super().__init__(nome, comandos)
-         
+        #Super classe = Bot, passa-se os parâmetros para o construtor dela
 
     def apresentacao(self):
-        "%s diz: Olá, eu sou o %s e estou triste hoje :(" % self.nome 
+        return "%s diz: Olá, eu sou o %s e estou triste hoje :(" % self.nome 
 
     def boas_vindas(self):
-        "%s diz: Por quê me escolher? Eu não sou feliz :/" % self.nome 
+        return "%s diz: Por quê me escolher? Eu não sou feliz :/" % self.nome 
 
     def despedida(self):
-        "%s diz: Ainda bem, agora posso ficar triste sozinho." % self.nome
-
-
+        return "%s diz: Ainda bem, agora posso ficar triste sozinho." % self.nome
