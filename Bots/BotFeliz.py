@@ -7,8 +7,9 @@ class BotFeliz(Bot):
             "Quero um conselho": "Você deve ser feliz! Viva sua vida sem se importar com as opiniões dos outros, seja você!!",
             "Como posso ser feliz, igual você?": "Ummmmmmm deixa eu ver, seja você mesmo, beba água, se exercite e tenha um coelho, eu acho.",
             "Conte uma piada": "O que o pato disse para a pata? Vem Quá HAHAHHAHAAHAHAHAHAAHAHAAHHA",
-          "Que tipo de pessoas você gosta?": "De pessoas algres, auto astral e sorridentes :) :) :) :)",
-            "Para quem você ira torcer nessa copa?": "É OBVIO QUE PARA O BRASILLLLLLLLLLLLLLLLLLL"
+            "Que tipo de pessoas você gosta?": "De pessoas algres, auto astral e sorridentes :) :) :) :)",
+            "Para quem você ira torcer nessa copa?": "É OBVIO QUE PARA O BRASILLLLLLLLLLLLLLLLLLL",
+            "Está feliz?": "É CLAROOOOOOOOOOOOO"
 
             }
         super().__init__(nome, comandos)
