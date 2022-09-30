@@ -1,3 +1,4 @@
+from distutils.log import error
 from Bots.Bot import Bot
 
 class SistemaChatBot:
@@ -11,16 +12,31 @@ class SistemaChatBot:
         self.__lista_bots= lista_bots
     
     def boas_vindas(self):
-        pass
-        ##mostra mensagem de boas vindas do sistema
+        print("Bem vindo ao sistema de bots da empresa {}!".format(self.__empresa))
 
     def mostra_menu(self):
         pass
         ##mostra o menu de escolha de bots
     
     def escolhe_bot(self):
-        pass
-        ##faz a entrada de dados do usuário e atribui o objeto ao atributo __bot 
+        print("Escolha um bot para conversar:\n")
+        for index, bot in enumerate(self.__lista_bots):
+            print(f"{index+1}. {bot.nome}")
+        
+        # Restrições de entrada da escolha
+        while True:
+            try:
+                escolha = int(input("Digite o número do bot: "))
+            except:
+                print("Digite um número válido")
+                continue
+            else:
+                if escolha < 1 or escolha > len(self.__lista_bots):
+                    print("Digite um número válido")
+                    continue
+                else:
+                    self.__bot = self.__lista_bots[escolha-1]
+                    break
 
     def mostra_comandos_bot(self):
         pass
