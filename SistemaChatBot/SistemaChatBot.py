@@ -13,10 +13,10 @@ class SistemaChatBot:
         self.__lista_bots= lista_bots
     
     def boas_vindas(self):
-        print("Bem vindo ao sistema de bots da empresa {}!\n".format(self.__empresa))
+        print("\nBem vindo ao sistema de bots da empresa {}!".format(self.__empresa))
 
     def mostra_menu(self): # Mosta o menu de escolhas de bot
-        print("Escolha um bot para conversar:\n")
+        print("\nEscolha um bot para conversar:")
         for index, bot in enumerate(self.__lista_bots):
             print(f"{index+1}. {bot.nome}")
     
@@ -57,14 +57,17 @@ class SistemaChatBot:
                 else:
                     break
         
-        print(self.__bot.executa_comando(self.__comandos_bot[escolha-1])) # Envia o comando escolhido (string da chave) para o bot escolhido
+        comando = self.__comandos_bot[escolha-1]
+        # Imprime a pargunta e a resposta do bot
+        print('\n"{}"'.format(comando))
+        print("> {}\n".format(self.__bot.executa_comando(comando))) # Envia o comando escolhido (string da chave) para o bot escolhido
         return True
 
     def inicio(self):
         self.boas_vindas() # Mostra mensagem de boas-vindas do sistema
         self.mostra_menu() # Mostra o menu ao usuário
         self.escolhe_bot() # Escolha do bot      
-        print(self.__bot.boas_vindas()) # Mostra mensagens de boas-vindas do bot escolhido
+        print("\n> {}\n".format(self.__bot.boas_vindas())) # Mostra mensagens de boas-vindas do bot escolhido
         
         # Entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
         status = True
@@ -72,4 +75,4 @@ class SistemaChatBot:
             self.mostra_comandos_bot()
             status = self.le_envia_comando()
         
-        print(self.__bot.despedida()) # Ao sair mostrar a mensagem de despedida do bot
+        print("\n> {}\n".format(self.__bot.despedida())) # Ao sair mostrar a mensagem de despedida do bot

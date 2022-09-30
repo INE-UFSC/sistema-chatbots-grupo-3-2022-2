@@ -27,7 +27,6 @@ class Bot(ABC):
     def mostra_comandos(self):
         for index, comando in enumerate(self.__comandos):
             print(f"{index+1}. {comando}")
-        print("\n")
     
     def executa_comando(self, cmd: str) -> str:
         return self.__comandos[cmd]
