@@ -9,26 +9,32 @@ class Bot(ABC):
         self.__nome = nome
         self.__comandos = {}
 
-    @property
-    def nome(self):
-        return self.__nome
 
-    @nome.setter
-    def nome(self, nome):
-        self.__nome = nome
-
+    # Métodos abstratos que precisam ser implementados nas classes filhas
     @abstractmethod
-    def mostra_comandos(self):
+    def apresentacao(self) -> str:
         pass
 
     @abstractmethod
-    def executa_comando(self,cmd):
+    def boas_vindas(self) -> str:
         pass
-
+   
     @abstractmethod
-    def boas_vindas():
+    def executa_comando(self, cmd: str) -> str:
         pass
     
     @abstractmethod
-    def despedida():
+    def despedida(self) -> str:
         pass
+
+    # Método que lista os comandos disponíveis
+    def mostra_comandos(self):
+        pass
+
+    # Setters e Getters
+    @property
+    def nome(self):
+        return self.__nome
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
