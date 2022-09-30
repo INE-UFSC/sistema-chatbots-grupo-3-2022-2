@@ -1,4 +1,4 @@
-from Bots.bot import Bot
+from Bots.Bot import Bot
 
 class BotTriste(Bot):
     def __init__(self,nome):

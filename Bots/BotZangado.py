@@ -2,18 +2,11 @@ from Bots.Bot import Bot
 
 class BotZangado(Bot):
     def __init__(self,nome):
-        self.__nome = nome
+        super.__init__(nome , {})
 
-    #nao esquecer o decorator
-    def nome(self):
-        pass
-
-    #nao esquecer o decorator
-    def nome(nome):
-        pass
 
     def apresentacao(self):
-        pass
+        return f"{self.__nome} diz: Estou dormindo escolha outro bot."
  
     def mostra_comandos(self):
         pass
@@ -22,7 +15,7 @@ class BotZangado(Bot):
         pass
 
     def boas_vindas(self):
-        pass
+        return f"{self.__nome} diz: Porque você me escolheu. Eu te odeio!" 
 
     def despedida(self):
-        pass
+        return f"{self.__nome} diz: Finalmente! Não aguentava mais você"
