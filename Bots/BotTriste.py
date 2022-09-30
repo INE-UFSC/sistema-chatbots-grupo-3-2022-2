@@ -1,4 +1,3 @@
-#copilot, eu
 from Bots.Bot import Bot
 
 class BotTriste(Bot):
