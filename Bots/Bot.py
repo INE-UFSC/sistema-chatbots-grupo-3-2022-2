@@ -29,7 +29,9 @@ class Bot(ABC):
 
     # Método que lista os comandos disponíveis
     def mostra_comandos(self):
-        pass
+        for index, comando in enumerate(self.__comandos):
+            print(f"{index+1}. {comando}")
+        print("\n")
 
     # Setters e Getters
     @property

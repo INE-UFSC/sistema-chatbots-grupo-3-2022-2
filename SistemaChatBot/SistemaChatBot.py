@@ -39,9 +39,7 @@ class SistemaChatBot:
         self.__comandos_bot = self.__bot.comandos.keys()
 
     def mostra_comandos_bot(self): # Mostra os comandos disponíveis do bot escolhido
-        for index, comando in enumerate(self.__comandos_bot):
-            print(f"{index+1}. {comando}")
-        print("\n")
+        self.__bot.mostra_comandos()
 
     def le_envia_comando(self):
         while True:
