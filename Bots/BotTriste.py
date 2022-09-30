@@ -1,5 +1,4 @@
-#copilot, eu
-from Bots.bot import Bot
+from Bots.Bot import Bot
 
 class BotTriste(Bot):
     def __init__(self, nome):
@@ -18,3 +17,6 @@ class BotTriste(Bot):
 
     def despedida(self):
         return "%s diz: Ainda bem, agora posso ficar triste sozinho." % self.nome
+
+    def executa_comando(self, cmd: str) -> str:
+        pass
