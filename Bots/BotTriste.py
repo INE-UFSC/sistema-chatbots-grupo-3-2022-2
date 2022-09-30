@@ -17,6 +17,3 @@ class BotTriste(Bot):
 
     def despedida(self):
         return "%s diz: Ainda bem, agora posso ficar triste sozinho." % self.nome
-
-    def executa_comando(self, cmd: str) -> str:
-        pass
