@@ -66,11 +66,12 @@ class SistemaChatBot:
         self.boas_vindas() # Mostra mensagem de boas-vindas do sistema
         self.mostra_menu() # Mostra o menu ao usuário
         self.escolhe_bot() # Escolha do bot      
-        self.__bot.boas_vindas() # Mostra mensagens de boas-vindas do bot escolhido
+        print(self.__bot.boas_vindas()) # Mostra mensagens de boas-vindas do bot escolhido
         
         # Entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
         status = True
         while status:
+            self.mostra_comandos_bot()
             status = self.le_envia_comando()
         
         self.__bot.despedida() # Ao sair mostrar a mensagem de despedida do bot
