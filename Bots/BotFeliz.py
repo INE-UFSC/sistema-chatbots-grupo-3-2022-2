@@ -19,9 +19,6 @@ class BotFeliz(Bot):
 
     def boas_vindas(self) -> str:
         return "Muito obrigado por me escolher, a partir de hoje serei seu melhor amigoooooooooo :) :)"
-   
-    def executa_comando(self, cmd: str) -> str:
-        pass
     
     def despedida(self) -> str:
         return "Até mais meu grande amigo, estou muitooooooooooooooooo feliz por te conhecer, espero muito que a gente se veja de novo, meu grande amigoooooooooooo!!!"
