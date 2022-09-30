@@ -9,13 +9,15 @@ class Bot(ABC):
         self.__nome = nome
         self.__comandos = {}
 
+    @abstractmethod
     @property
     def nome(self):
-        return self.__nome
+        pass
 
+    @abstractmethod
     @nome.setter
     def nome(self, nome):
-        self.__nome = nome
+        pass
 
     @abstractmethod
     def mostra_comandos(self):
