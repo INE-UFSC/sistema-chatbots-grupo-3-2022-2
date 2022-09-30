@@ -69,6 +69,7 @@ class SistemaChatBot:
         self.__bot.boas_vindas() # Mostra mensagens de boas-vindas do bot escolhido
         
         # Entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
+        status = True
         while status:
             status = self.le_envia_comando()
         
