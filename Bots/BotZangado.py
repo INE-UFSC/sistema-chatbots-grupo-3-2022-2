@@ -8,16 +8,14 @@ class BotZangado(Bot):
 
 
     def apresentacao(self):
-        return f"{self.__nome} diz: Estou dormindo escolha outro bot."
+        return f"{self.nome} diz: Estou dormindo escolha outro bot."
  
     def mostra_comandos(self):
         pass
     
-    def executa_comando(self,cmd):
-        pass
 
     def boas_vindas(self):
-        return f"{self.__nome} diz: Porque você me escolheu. Eu te odeio!" 
+        return f"{self.nome} diz: Porque você me escolheu. Eu te odeio!" 
 
     def despedida(self):
-        return f"{self.__nome} diz: Finalmente! Não aguentava mais você"
+        return f"{self.nome} diz: Finalmente! Não aguentava mais você"
