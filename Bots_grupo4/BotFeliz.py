@@ -1,6 +1,6 @@
-from Bots.Bot import Bot
+from Bots_Grupo4.Bot import Bot
 
-class BotFeliz(Bot):
+class BotFeliz(Bot): 
     def __init__(self,nome):
         super().__init__(nome,
                          comandos={"Bom dia": "Que lindo dia para falar com uma pessoa legal!",
