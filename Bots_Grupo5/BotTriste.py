@@ -19,3 +19,6 @@ class BotTriste(Bot):
 
     def despedida(self):
         return 'Deus não existe'
+    
+    def apresentacao(self) -> str:
+        return super().apresentacao()
