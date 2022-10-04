@@ -1,4 +1,4 @@
-##implemente as seguintes classes
+
 
 from abc import ABC, abstractmethod
 
