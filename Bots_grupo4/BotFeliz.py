@@ -1,4 +1,4 @@
-from Bots_Grupo4.Bot import Bot
+from Bot import Bot
 
 class BotFeliz(Bot): 
     def __init__(self,nome):
