@@ -7,9 +7,9 @@ class SistemaChatBot:
         self.__bot = None
         self.__comandos_bot = None
 
-        for bot in lista_bots:
-            if not isinstance(bot, Bot):
-                raise TypeError("Lista de bots deve conter apenas objetos do tipo Bot")
+        #for bot in lista_bots:
+        #    if not isinstance(bot, Bot):
+        #        raise TypeError("Lista de bots deve conter apenas objetos do tipo Bot")
         self.__lista_bots= lista_bots
     
     def boas_vindas(self):

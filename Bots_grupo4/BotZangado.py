@@ -1,4 +1,4 @@
-from Bot import Bot
+from Bots.Bot import Bot
 
 class BotZangado(Bot):
     def __init__(self,nome):
