@@ -30,7 +30,7 @@ from Bots_Grupo7.BotZangado import BotZangado as BotZangado_Grupo7
 #lista_bots = [BotZangado("Yoda"), BotTriste("R2D2"), BotFeliz("C3PO")]
 #lista_bots = [BotZangado_Grupo1("Yoda"), BotInteligente_Grupo1("R2D2")]
 #lista_bots = [BotFeliz_Grupo4("C3PO"), BotTriste_Grupo4("R2D2"), BotZangado_Grupo4("Yoda")]
-lista_bots = [BotFeliz_Grupo7("C3PO"), BotTriste_Grupo7("R2D2"), BotZangado_Grupo7("Yoda")]
+#lista_bots = [BotFeliz_Grupo7("C3PO"), BotTriste_Grupo7("R2D2"), BotZangado_Grupo7("Yoda")]
 
 sys = scb.SistemaChatBot("CrazyBots",lista_bots)
 sys.inicio()
