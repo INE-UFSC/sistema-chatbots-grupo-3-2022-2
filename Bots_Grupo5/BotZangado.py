@@ -20,3 +20,6 @@ class BotZangado(Bot):
 
     def boas_vindas(self):
         return 'Oque você está fazendo aqui vai embora?'
+
+    def apresentacao(self) -> str:
+        return super().apresentacao()
